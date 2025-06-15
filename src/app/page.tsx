@@ -29,6 +29,9 @@ export default function Home() {
           <li className="tracking-[-.01em]">
             Config Value: {process.env.NEXT_PUBLIC_CONFIG_VALUE}
           </li>
+          <li className="tracking-[-.01em]">
+            Version: {process.env.NEXT_PUBLIC_VERSION}
+          </li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
