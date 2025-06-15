@@ -1,8 +1,8 @@
 replicaCount: 1
 
 image:
-  repository: registry.cn-hangzhou.aliyuncs.com/next-configmap/next-app
-  tag: latest
+  repository: yggdrasill/next-configmap
+  tag: 0.1.1
   pullPolicy: IfNotPresent
 
 service:
