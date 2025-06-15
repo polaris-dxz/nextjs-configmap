@@ -23,6 +23,12 @@ export default function Home() {
           <li className="tracking-[-.01em]">
             Save and see your changes instantly.
           </li>
+          <li className="tracking-[-.01em]">
+            Current host: {process.env.HOST}
+          </li>
+          <li className="tracking-[-.01em]">
+            Config Value: {process.env.CONFIG_VALUE}
+          </li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">

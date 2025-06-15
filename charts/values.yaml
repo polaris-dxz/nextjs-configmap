@@ -1,0 +1,27 @@
+replicaCount: 1
+
+image:
+  repository: registry.cn-hangzhou.aliyuncs.com/next-configmap/next-app
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30080
+
+configMap:
+  dev:
+    host: "dev.example.com"
+    configValue: "Development Environment"
+  tech:
+    host: "tech.example.com"
+    configValue: "Technical Environment"
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi 
