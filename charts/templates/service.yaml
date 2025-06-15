@@ -8,18 +8,6 @@ spec:
     - port: {{ .Values.service.port }}
       targetPort: 3000
       protocol: TCP
+      nodePort: {{ .Values.service.nodePort }}
   selector:
     app: {{ .Release.Name }}
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: {{ .Release.Name }}-tech
-spec:
-  type: {{ .Values.service.type }}
-  ports:
-    - port: {{ .Values.service.port }}
-      targetPort: 3000
-      protocol: TCP
-  selector:
-    app: {{ .Release.Name }}-tech 

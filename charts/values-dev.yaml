@@ -11,12 +11,11 @@ service:
   nodePort: 30080
 
 configMap:
-  dev:
-    host: "dev.example.com"
-    configValue: "Development Environment"
-  tech:
-    host: "tech.example.com"
-    configValue: "Technical Environment"
+  host: "dev.example.com"
+  configValue: "Development Environment"
+
+ingress:
+  host: "dev.example.com"
 
 resources:
   limits:

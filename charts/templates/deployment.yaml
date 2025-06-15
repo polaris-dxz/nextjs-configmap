@@ -23,29 +23,3 @@ spec:
             - containerPort: 3000
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
----
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: {{ .Release.Name }}-tech
-spec:
-  replicas: {{ .Values.replicaCount }}
-  selector:
-    matchLabels:
-      app: {{ .Release.Name }}-tech
-  template:
-    metadata:
-      labels:
-        app: {{ .Release.Name }}-tech
-    spec:
-      containers:
-        - name: {{ .Chart.Name }}-tech
-          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-          imagePullPolicy: {{ .Values.image.pullPolicy }}
-          envFrom:
-            - configMapRef:
-                name: {{ .Release.Name }}-tech-config
-          ports:
-            - containerPort: 3000
-          resources:
-            {{- toYaml .Values.resources | nindent 12 }} 

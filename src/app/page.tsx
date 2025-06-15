@@ -24,10 +24,10 @@ export default function Home() {
             Save and see your changes instantly.
           </li>
           <li className="tracking-[-.01em]">
-            Current host: {process.env.HOST}
+            Current host: {process.env.NEXT_PUBLIC_HOST}
           </li>
           <li className="tracking-[-.01em]">
-            Config Value: {process.env.CONFIG_VALUE}
+            Config Value: {process.env.NEXT_PUBLIC_CONFIG_VALUE}
           </li>
         </ol>
 

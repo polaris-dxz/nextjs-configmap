@@ -3,13 +3,5 @@ kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-config
 data:
-  HOST: {{ .Values.configMap.dev.host | quote }}
-  CONFIG_VALUE: {{ .Values.configMap.dev.configValue | quote }}
----
-apiVersion: v1
-kind: ConfigMap
-metadata:
-  name: {{ .Release.Name }}-tech-config
-data:
-  HOST: {{ .Values.configMap.tech.host | quote }}
-  CONFIG_VALUE: {{ .Values.configMap.tech.configValue | quote }} 
+  NEXT_PUBLIC_HOST: {{ .Values.configMap.host | quote }}
+  NEXT_PUBLIC_CONFIG_VALUE: {{ .Values.configMap.configValue | quote }}

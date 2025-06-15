@@ -1,0 +1,26 @@
+replicaCount: 1
+
+image:
+  repository: yggdrasill/next-configmap
+  tag: 0.1.1
+  pullPolicy: IfNotPresent
+
+service:
+  type: NodePort
+  port: 80
+  nodePort: 30081
+
+configMap:
+  host: "tech.example.com"
+  configValue: "Technical Environment"
+
+ingress:
+  host: "tech.example.com"
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi 
